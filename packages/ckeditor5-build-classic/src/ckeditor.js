@@ -19,7 +19,6 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
-import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
@@ -35,7 +34,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
-import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -54,8 +53,6 @@ ClassicEditor.builtinPlugins = [
 	BlockQuote,
 	CodeBlock,
 	CKFinder,
-	CloudServices,
-	EasyImage,
 	Heading,
 	Image,
 	ImageCaption,
@@ -70,7 +67,8 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	GeneralHtmlSupport
 ];
 
 // Editor configuration.
