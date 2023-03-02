@@ -12,7 +12,6 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
-import CKBox from '@ckeditor/ckeditor5-ckbox/src/ckbox';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
@@ -38,7 +37,6 @@ import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
-import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -56,7 +54,6 @@ ClassicEditor.builtinPlugins = [
 	Underline,
 	BlockQuote,
 	CodeBlock,
-	CKBox,
 	CKFinder,
 	Heading,
 	Image,
@@ -75,8 +72,7 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	GeneralHtmlSupport,
-	HtmlEmbed,
-	CloudServices
+	HtmlEmbed
 ];
 
 // Editor configuration.
