@@ -14,7 +14,6 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKBox from '@ckeditor/ckeditor5-ckbox/src/ckbox';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
-import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
@@ -31,22 +30,33 @@ import PictureEditing from '@ckeditor/ckeditor5-image/src/pictureediting';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
-import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	Essentials,
+	Alignment,
+	FontSize,
+	FontFamily,
+	FontColor,
 	UploadAdapter,
 	Autoformat,
 	Bold,
 	Italic,
+	Underline,
 	BlockQuote,
+	CodeBlock,
 	CKBox,
 	CKFinder,
-	CloudServices,
-	EasyImage,
 	Heading,
 	Image,
 	ImageCaption,
@@ -62,7 +72,9 @@ ClassicEditor.builtinPlugins = [
 	PictureEditing,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	GeneralHtmlSupport,
+	HtmlEmbed,
 ];
 
 // Editor configuration.
@@ -85,8 +97,8 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
-		]
+			'redo',
+		],
 	},
 	image: {
 		toolbar: [
@@ -95,16 +107,12 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:side',
 			'|',
 			'toggleImageCaption',
-			'imageTextAlternative'
-		]
+			'imageTextAlternative',
+		],
 	},
 	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
-		]
+		contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'en',
 };
