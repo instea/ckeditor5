@@ -38,6 +38,7 @@ import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -75,6 +76,7 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
 	GeneralHtmlSupport,
 	HtmlEmbed,
+	CloudServices
 ];
 
 // Editor configuration.
